@@ -52,12 +52,22 @@
     let currentQuestionIndex = 0;
     let currentRound = 1;
 
+    // 新增：用來追蹤答對題數與總題數的變數
+    let roundCorrectCount = 0;
+    let totalCorrectCount = 0;
+    let totalQuestionCount = 0;
+
     // 初始化測驗
     function initApp() {
         let savedPool = localStorage.getItem('quizPool');
         let savedRound = localStorage.getItem('quizRound');
         let savedRoundQs = localStorage.getItem('quizRoundQuestions');
         let savedIndex = localStorage.getItem('quizQuestionIndex');
+        
+        // 讀取正確率紀錄
+        let savedRoundCorrect = localStorage.getItem('quizRoundCorrect');
+        let savedTotalCorrect = localStorage.getItem('quizTotalCorrect');
+        let savedTotalQuestions = localStorage.getItem('quizTotalQuestions');
 
         // 檢查是否有完整存檔紀錄 (防重整丟失進度)
         if (savedPool && savedRound && savedRoundQs && savedIndex && savedRound <= 25) {
@@ -65,6 +75,11 @@
             currentRound = parseInt(savedRound);
             currentRoundQuestions = JSON.parse(savedRoundQs);
             currentQuestionIndex = parseInt(savedIndex);
+            
+            // 恢復正確率紀錄
+            roundCorrectCount = savedRoundCorrect ? parseInt(savedRoundCorrect) : 0;
+            totalCorrectCount = savedTotalCorrect ? parseInt(savedTotalCorrect) : 0;
+            totalQuestionCount = savedTotalQuestions ? parseInt(savedTotalQuestions) : 0;
             
             // 如果題庫因為更新變大，避免出錯，防呆檢查
             if(currentRoundQuestions.length > 0 && currentQuestionIndex < currentRoundQuestions.length) {
@@ -89,12 +104,20 @@
     function resetFullGame() {
         currentPool = [...questionBank];
         currentRound = 1;
+        
+        // 歸零所有的正確率統計
+        roundCorrectCount = 0;
+        totalCorrectCount = 0;
+        totalQuestionCount = 0;
+        
         saveState();
     }
 
     // 產生這一輪的題目
     function generateRound() {
         currentRoundQuestions = [];
+        roundCorrectCount = 0; // 每一輪開始時，將本輪答對題數歸零
+
         // 洗牌當前題庫池
         currentPool.sort(() => Math.random() - 0.5);
 
@@ -125,12 +148,17 @@
         renderQuestion();
     }
 
-    // 儲存進度 (包含當前輪的進度)
+    // 儲存進度 (包含當前輪的進度與正確率)
     function saveState() {
         localStorage.setItem('quizPool', JSON.stringify(currentPool));
         localStorage.setItem('quizRound', currentRound);
         localStorage.setItem('quizRoundQuestions', JSON.stringify(currentRoundQuestions));
         localStorage.setItem('quizQuestionIndex', currentQuestionIndex);
+        
+        // 儲存正確率紀錄
+        localStorage.setItem('quizRoundCorrect', roundCorrectCount);
+        localStorage.setItem('quizTotalCorrect', totalCorrectCount);
+        localStorage.setItem('quizTotalQuestions', totalQuestionCount);
     }
 
     // 渲染畫面
@@ -173,6 +201,13 @@
         let q = currentRoundQuestions[currentQuestionIndex];
         let btns = document.querySelectorAll('.option-btn');
         
+        // 檢查是否答對，並更新統計變數
+        if (selectedIndex === q.answer) {
+            roundCorrectCount++;
+            totalCorrectCount++;
+        }
+        totalQuestionCount++; // 只要答題了就增加總題數
+        
         btns.forEach((btn, index) => {
             btn.disabled = true; // 鎖定按鈕
             if (index === q.answer) {
@@ -192,20 +227,34 @@
     // 下一題
     function nextQuestion() {
         currentQuestionIndex++;
-        saveState(); // 進入下一題前存檔
+        saveState(); // 進入下一題前存檔 (此時會一併儲存更新後的正確率)
         renderQuestion();
     }
 
     // 結束此輪
     function endRound() {
+        // 計算這輪的正確率
+        let rTotal = currentRoundQuestions.length;
+        let rCorrect = roundCorrectCount;
+        let rAcc = rTotal > 0 ? (rCorrect / rTotal) * 100 : 0;
+        let rAccStr = rAcc % 1 === 0 ? rAcc : rAcc.toFixed(1); // 如果是整數就不顯示小數點
+
         currentRound++;
+
         if (currentRound > 25) {
-            alert("恭喜！25 輪全部完成，即將歸零重置！");
+            // 計算全 25 輪的總正確率
+            let tTotal = totalQuestionCount;
+            let tCorrect = totalCorrectCount;
+            let tAcc = tTotal > 0 ? (tCorrect / tTotal) * 100 : 0;
+            let tAccStr = tAcc % 1 === 0 ? tAcc : tAcc.toFixed(1);
+
+            alert(`恭喜！25 輪全部完成！\n\n🎯 最終成績單：\n本輪正確率：${rCorrect}/${rTotal}, ${rAccStr}%\n總正確率：${tCorrect}/${tTotal}, ${tAccStr}%\n\n系統即將歸零重置！`);
             resetFullGame();
+            generateRound();
         } else {
-            alert(`第 ${currentRound - 1} 輪完成！準備進入下一輪。`);
+            alert(`第 ${currentRound - 1} 輪完成！\n\n🎯 本輪正確率：${rCorrect}/${rTotal}, ${rAccStr}%\n\n準備進入下一輪。`);
+            generateRound();
         }
-        generateRound();
     }
 
     // 啟動程式
