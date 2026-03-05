@@ -908,60 +908,68 @@ const questionBank = [
         "explanation": "這個案例中的患者表現出很可能是初次發作的嚴重 CDI，這由新發作的腹瀉和感染的臨床徵象及症狀所支持。值得注意的是，患者沒有低血壓，且乳酸低於 2–4 mmol/L，表示沒有休克或猛爆性 CDI 的其他決定性特徵；因此，使用腸道 vancomycin 作為單一療法是現有最好的答案（選項 D 正確）。雖然 2021 年 IDSA/SHEA 重點指引更新建議使用 fidaxomicin 治療非猛爆性、初次發作的 CDI，但口服/腸道 vancomycin 是一個可接受的替代方案，特別是在無法取得 fidaxomicin 的情況下。口服/腸道 vancomycin 和靜脈注射 metronidazole 的合併治療應保留給複雜性 CDI (complicated CDI) 使用（選項 C 錯誤），不建議靜脈注射 metronidazole（選項 B 錯誤）。對於患有複雜性 CDI 且擔心有腸阻塞，或無法將口服/腸道 vancomycin 輸送到結腸的患者，建議使用 metronidazole 和結腸內給藥的組合（選項 A 錯誤）。"
     },
     {
-        "id": "PC-15",
-        "type": "single",
+        "id": "Case-Scenario-3",
+        "type": "group",
         "unit": "Infectious Diseases 1",
-        "question": "R.J. 是一名 57 歲男性，在發生急性腸阻塞後接受了腸切除術，並被收入 SICU。在術後第 3 天，R.J. 的心搏過速惡化、尿量減少，最高體溫達到 102.9°F (39.4°C)，WBC 為 18.2 x 103 cells/mm3。R.J. 報告說，儘管只有輕微的紅斑，但他大腹部手術傷口周圍的疼痛正在惡化。打開傷口的幾根縫線後，檢查時擠出膿液，並在傷口周圍區域注意到捻發音 (crepitus)。R.J. 被緊急送往手術室進行探查，並被注意到需要對壞死的皮下組織（包括波及的筋膜）進行大範圍的清創。R.J. 的傷口保持開放，並使用臨時的紗布敷料 (gauze dressing)。哪種經驗性抗菌療程對 R.J. 最合適？",
-        "options": [
-            "A. Ceftaroline 和 vancomycin。",
-            "B. Clindamycin、penicillin G 和 vancomycin。",
-            "C. Piperacillin/tazobactam、clindamycin和 vancomycin。",
-            "D. Clindamycin 和 linezolid。"
-        ],
-        "answer": 2,
-        "explanation": "壞死性筋膜炎 (Necrotizing fasciitis) 是一種嚴重、危及生命的感染，通常是多種微生物混合感染 (polymicrobial)。對壞死組織進行及時的手術清創和廣效性抗生素治療是初始治療的支柱。應經驗性地啟動對化膿性鏈球菌 (S. pyogenes)、MRSA 以及好氧和厭氧革蘭氏陰性桿菌具有活性的藥劑，連同加入輔助性的 clindamycin，這可能會減少細菌毒素的產生。考量到感染的嚴重程度，儘管沒有傳統的多重抗藥性微生物危險因子，包含 piperacillin/tazobactam、vancomycin 和 clindamycin 的經驗性療程是最合適的（選項 C 正確）。Penicillin G 不夠廣效（選項 B 錯誤），而 ceftaroline 和 vancomycin 的組合不包含 clindamycin（選項 A 錯誤）。Clindamycin 和 linezolid 的組合不包含對革蘭氏陰性菌的經驗性覆蓋。（選項 D 錯誤）。"
+        "sharedText": "【案例情境三】R.J. 是一名 57 歲男性，在發生急性腸阻塞後接受了腸切除術，並被收入 SICU。在術後第 3 天，R.J. 的心搏過速惡化、尿量減少，最高體溫達到 102.9°F (39.4°C)，WBC 為 18.2 x 103 cells/mm3。R.J. 報告說，儘管只有輕微的紅斑，但他大腹部手術傷口周圍的疼痛正在惡化。打開傷口的幾根縫線後，檢查時擠出膿液，並在傷口周圍區域注意到捻發音 (crepitus)。R.J. 被緊急送往手術室進行探查，並被注意到需要對壞死的皮下組織（包括波及的筋膜）進行大範圍的清創。R.J. 的傷口保持開放，並使用臨時的紗布敷料 (gauze dressing)。",
+        "subQuestions": [
+            {
+                "id": "PC-15",
+                "question": "第 15 題 (PC-15) 哪種經驗性抗菌療程對 R.J. 最合適？",
+                "options": [
+                    "A. Ceftaroline 和 vancomycin。",
+                    "B. Clindamycin、penicillin G 和 vancomycin。",
+                    "C. Piperacillin/tazobactam、clindamycin 和 vancomycin。",
+                    "D. Clindamycin 和 linezolid。"
+                ],
+                "answer": 2,
+                "explanation": "壞死性筋膜炎 (Necrotizing fasciitis) 是一種嚴重、危及生命的感染，通常是多種微生物混合感染 (polymicrobial)。對壞死組織進行及時的手術清創和廣效性抗生素治療是初始治療的支柱。應經驗性地啟動對化膿性鏈球菌 (S. pyogenes)、MRSA 以及好氧和厭氧革蘭氏陰性桿菌具有活性的藥劑，連同加入輔助性的 clindamycin，這可能會減少細菌毒素的產生。考量到感染的嚴重程度，儘管沒有傳統的多重抗藥性微生物危險因子，包含 piperacillin/tazobactam、vancomycin 和 clindamycin 的經驗性療程是最合適的（選項 C 正確）。Penicillin G 不夠廣效（選項 B 錯誤），而 ceftaroline 和 vancomycin 的組合不包含 clindamycin（選項 A 錯誤）。Clindamycin 和 linezolid 的組合不包含對革蘭氏陰性菌的經驗性覆蓋。（選項 D 錯誤）。"
+            },
+            {
+                "id": "PC-16",
+                "question": "第 16 題 (PC-16) 從 R.J. 傷口第一次清創取得的術中組織培養顯示，有許多呈鏈狀排列的革蘭氏陽性球菌 (gram-positive cocci in chains) 和中等數量的非發酵乳糖革蘭氏陰性桿菌 (non–lactose-fermenting gram-negative bacilli)。R.J. 將接受一系列的術中壞死組織清創。考量到革蘭氏染色引起對 S. pyogenes 的擔憂，哪種藥物治療介入措施對治療 R.J. 的壞死性筋膜炎最合適？",
+                "options": [
+                    "A. 加入具有協同作用 (synergistic) 的 gentamicin。",
+                    "B. 繼續或啟動輔助性的 clindamycin 以對抗毒素的產生。",
+                    "C. 基於對 S. pyogenes 產生抗藥性的擔憂，確保 vancomycin 包含在療程中。",
+                    "D. 給予靜脈免疫球蛋白 (IVIG)。"
+                ],
+                "answer": 1,
+                "explanation": "這名患者壞死性感染的術中培養引起了對 S. pyogenes 的擔憂。S. pyogenes 會產生與組織壞死相關的外毒素 (exotoxin)。雖然殺菌性抗生素治療對於根除 S. pyogenes 是必要的，但輔助性的 clindamycin 可能會減少毒素的產生，從而限制組織壞死的程度（選項 B 正確）。Vancomycin 應保留給對 β-內醯胺類藥物過敏的 S. pyogenes 感染患者，因為對 β-內醯胺類產生抗藥性是罕見的（選項 C 錯誤）。此外，考量到革蘭氏陽性 β-內醯胺類對抗 S. pyogenes 的有效性，不需要使用 gentamicin 進行協同抗生素治療（選項 A 錯誤）。IVIG 在鏈球菌壞死性筋膜炎中的角色是有爭議的。一項小型的隨機、安慰劑對照試驗——根據是否需要手術和 clindamycin 治療進行分層——顯示，在 21 名患有鏈球菌毒性休克症候群 (streptococcal toxic shock syndrome) 的患者中，並沒有改善存活率或縮短壞死性筋膜炎或蜂窩性組織炎不再進展的時間。因此，在有更多研究可用之前，指引不建議使用 IVIG（選項 D 錯誤）。"
+            }
+        ]
     },
     {
-        "id": "PC-16",
-        "type": "single",
+        "id": "Case-Scenario-4",
+        "type": "group",
         "unit": "Infectious Diseases 1",
-        "question": "從 R.J. 傷口第一次清創取得的術中組織培養顯示，有許多呈鏈狀排列的革蘭氏陽性球菌 (gram-positive cocci in chains) 和中等數量的非發酵乳糖革蘭氏陰性桿菌 (non–lactose-fermenting gram-negative bacilli)。R.J. 將接受一系列的術中壞死組織清創。考量到革蘭氏染色引起對 S. pyogenes 的擔憂，哪種藥物治療介入措施對治療 R.J. 的壞死性筋膜炎最合適？",
-        "options": [
-            "A. 加入具有協同作用 (synergistic) 的 gentamicin。",
-            "B. 繼續或啟動輔助性的 clindamycin 以對抗毒素的產生。",
-            "C. 基於對 S. pyogenes 產生抗藥性的擔憂，確保 vancomycin 包含在療程中。",
-            "D. 給予靜脈免疫球蛋白 (IVIG)。"
-        ],
-        "answer": 1,
-        "explanation": "這名患者壞死性感染的術中培養引起了對 S. pyogenes 的擔憂。S. pyogenes 會產生與組織壞死相關的外毒素 (exotoxin)。雖然殺菌性抗生素治療對於根除 S. pyogenes 是必要的，但輔助性的 clindamycin 可能會減少毒素的產生，從而限制組織壞死的程度（選項 B 正確）。Vancomycin 應保留給對 β-內醯胺類藥物過敏的 S. pyogenes 感染患者，因為對 β-內醯胺類產生抗藥性是罕見的（選項 C 錯誤）。此外，考量到革蘭氏陽性 β-內醯胺類對抗 S. pyogenes 的有效性，不需要使用 gentamicin 進行協同抗生素治療（選項 A 錯誤）。IVIG 在鏈球菌壞死性筋膜炎中的角色是有爭議的。一項小型的隨機、安慰劑對照試驗——根據是否需要手術和 clindamycin 治療進行分層——顯示，在 21 名患有鏈球菌毒性休克症候群 (streptococcal toxic shock syndrome) 的患者中，並沒有改善存活率或縮短壞死性筋膜炎或蜂窩性組織炎不再進展的時間。因此，在有更多研究可用之前，指引不建議使用 IVIG（選項 D 錯誤）。"
-    },
-    {
-        "id": "PC-17",
-        "type": "single",
-        "unit": "Infectious Diseases 1",
-        "question": "L.H. 是一名 23 歲女性，最近被診斷出患有無併發症的泌尿道感染。在開始使用 sulfamethoxazole/trimethoprim 兩天後，L.H. 表現出嚴重的全身性發炎反應，並伴有佔總體表面積 (TBSA) 30% 的上臂和背部表皮鬆解，從外院來到燒傷 ICU。據報導，L.H. 6 小時前到外院就診時，只有 10% 的 TBSA 受波及。自從入住燒傷 ICU 以來的新病灶包括大腿和口腔的紅斑，TBSA 現在達到 40%，暗示有毒性表皮壞死溶解症 (TEN)。L.H. 的 SCORTEN 分數為 3。哪項會是最佳的初始藥物治療介入措施？",
-        "options": [
-            "A. 晶體液復甦。",
-            "B. Cyclophosphamide。",
-            "C. 用於傷口預防的經驗性 vancomycin。",
-            "D. 高劑量全身性皮質類固醇。"
-        ],
-        "answer": 0,
-        "explanation": "處置嚴重皮膚損傷的基石之一包括容積復甦，優先使用晶體液（選項 A 正確）。免疫調節療法 (immunomodulating therapies)（如皮質類固醇和 cyclophosphamide）的實用性受限於觀察性且控制不良的證據或病例報告；因此，應將免疫調節療法保留給使用正式方案的專業中心，並考慮在臨床研究或登錄計畫下進行治療（選項 B 和 D 錯誤）。對這些患者進行傷口護理是必要的；然而，除非客觀上懷疑或確認有感染，否則應避免添加可能干擾反應或惡化損傷的不必要藥物（例如抗生素）（選項 C 錯誤）。"
-    },
-    {
-        "id": "PC-18",
-        "type": "single",
-        "unit": "Infectious Diseases 1",
-        "question": "L.H. 的情況繼續惡化，目前 TBSA 波及面積達到 50%，口腔波及惡化，且急性腎損傷正在進展。您和您的團隊考慮將 IVIG 作為下一個藥物治療介入措施。哪項最能描述 IVIG 在處置 TEN 方面以實證為基礎的角色？",
-        "options": [
-            "A. 應在患者的病情進展為 TEN 之前給予 IVIG。",
-            "B. IVIG 應保留給擁有跨領域共識方案 (interdisciplinary consensus protocols) 來引導使用的專業中心。",
-            "C. 多中心關鍵性試驗 (Multicenter pivotal trials) 顯示，IVIG 對於有眼部波及的患者最有效。",
-            "D. 對現有證據的統合分析支持 IVIG 是處置 TEN 的標準照護。"
-        ],
-        "answer": 1,
-        "explanation": "將 IVIG 用於史蒂芬強森症候群 (Stevens-Johnson syndrome, SJS)/TEN 存在爭議。現有證據來自病例報告/系列、觀察性世代研究或小型、單中心的隨機試驗（選項 C 錯誤）。由於不同出版物之間存在偏差、外部效度有限且結果/觀察不一致，因此統合分析和共識指引不廣泛認可 IVIG 的使用（選項 D 錯誤）。現有數據分析顯示，IVIG 可降低具有中到高 SCORTEN 分數的 TEN 患者與 SCORTEN 相關的死亡率；關於 IVIG 在 SJS 中角色的數據甚至更少（選項 A 錯誤）。考量到支持藥物治療介入的證據有限以及 TEN 危及生命的嚴重程度，燒傷轉診中心應根據由跨領域從業人員（他們已經客觀地評估了有關安全性、療效和藥物基因體學 [pharmacogenomic] 意涵的現有證據）制定的當地方案/指引來決定是否使用 IVIG（選項 B 正確）。"
+        "sharedText": "【案例情境四】L.H. 是一名 23 歲女性，最近被診斷出患有無併發症的泌尿道感染。在開始使用 sulfamethoxazole/trimethoprim 兩天後，L.H. 表現出嚴重的全身性發炎反應，並伴有佔總體表面積 (TBSA) 30% 的上臂和背部表皮鬆解，從外院來到燒傷 ICU。據報導，L.H. 6 小時前到外院就診時，只有 10% 的 TBSA 受波及。自從入住燒傷 ICU 以來的新病灶包括大腿和口腔的紅斑，TBSA 現在達到 40%，暗示有毒性表皮壞死溶解症 (TEN)。L.H. 的 SCORTEN 分數為 3。",
+        "subQuestions": [
+            {
+                "id": "PC-17",
+                "question": "第 17 題 (PC-17) 哪項會是最佳的初始藥物治療介入措施？",
+                "options": [
+                    "A. 晶體液復甦。",
+                    "B. Cyclophosphamide。",
+                    "C. 用於傷口預防的經驗性 vancomycin。",
+                    "D. 高劑量全身性皮質類固醇。"
+                ],
+                "answer": 0,
+                "explanation": "處置嚴重皮膚損傷的基石之一包括容積復甦，優先使用晶體液（選項 A 正確）。免疫調節療法 (immunomodulating therapies)（如皮質類固醇和 cyclophosphamide）的實用性受限於觀察性且控制不良的證據或病例報告；因此，應將免疫調節療法保留給使用正式方案的專業中心，並考慮在臨床研究或登錄計畫下進行治療（選項 B 和 D 錯誤）。對這些患者進行傷口護理是必要的；然而，除非客觀上懷疑或確認有感染，否則應避免添加可能干擾反應或惡化損傷的不必要藥物（例如抗生素）（選項 C 錯誤）。"
+            },
+            {
+                "id": "PC-18",
+                "question": "第 18 題 (PC-18) L.H. 的情況繼續惡化，目前 TBSA 波及面積達到 50%，口腔波及惡化，且急性腎損傷正在進展。您和您的團隊考慮將 IVIG 作為下一個藥物治療介入措施。哪項最能描述 IVIG 在處置 TEN 方面以實證為基礎的角色？",
+                "options": [
+                    "A. 應在患者的病情進展為 TEN 之前給予 IVIG。",
+                    "B. IVIG 應保留給擁有跨領域共識方案 (interdisciplinary consensus protocols) 來引導使用的專業中心。",
+                    "C. 多中心關鍵性試驗 (Multicenter pivotal trials) 顯示，IVIG 對於有眼部波及的患者最有效。",
+                    "D. 對現有證據的統合分析支持 IVIG 是處置 TEN 的標準照護。"
+                ],
+                "answer": 1,
+                "explanation": "將 IVIG 用於史蒂芬強森症候群 (Stevens-Johnson syndrome, SJS)/TEN 存在爭議。現有證據來自病例報告/系列、觀察性世代研究或小型、單中心的隨機試驗（選項 C 錯誤）。由於不同出版物之間存在偏差、外部效度有限且結果/觀察不一致，因此統合分析和共識指引不廣泛認可 IVIG 的使用（選項 D 錯誤）。現有數據分析顯示，IVIG 可降低具有中到高 SCORTEN 分數的 TEN 患者與 SCORTEN 相關的死亡率；關於 IVIG 在 SJS 中角色的數據甚至更少（選項 A 錯誤）。考量到支持藥物治療介入的證據有限以及 TEN 危及生命的嚴重程度，燒傷轉診中心應根據由跨領域從業人員（他們已經客觀地評估了有關安全性、療效和藥物基因體學 [pharmacogenomic] 意涵的現有證據）制定的當地方案/指引來決定是否使用 IVIG（選項 B 正確）。"
+            }
+        ]
     },
     {
         "id": "PC-19",
